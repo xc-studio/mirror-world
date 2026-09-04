@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+
+@keyframes rainbow {
+  0% {
+    color: #ff0000;
+    text-shadow: 0px 0px 10px #ff0000;
+  }
+  
+  16.7% {
+    color: yellow;
+    text-shadow: 0px 0px 10px yellow;
+  }
+  
+  33.333% {
+    color: #00ff00;
+    text-shadow: 0px 0px 10px #00ff00;
+  }
+  
+  50% {
+    color: #00ffff;
+    text-shadow: 0px 0px 10px #00ffff;
+  }
+  
+  66.666% {
+    color: #0000ff;
+    text-shadow: 0px 0px 10px #0000ff;
+  }
+  
+  100% {
+    color: #ff0000;
+    text-shadow: 0px 0px 10px #ff0000;
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: translateY(0px);
+  }
+  
+  100% {
+    transform: translateY(-25px);
+  }
+}
+
+:root {
+  --delay: 0;
+}
+
+
+#gameCanvas {
+  font-family: "Gabarito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  display: block;
+  border-radius: 20px;
+}
+
+.gabarito {
+  font-family: "Gabarito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+  margin: 5px;
+  gap: 10px;
+}
+
+#skip {
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+  border-radius: 20px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+#game-clear-box {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 1000px;
+  height: 650px;
+  z-index: 10000;
+  background-color: transparent;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.clear-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+}
+
+.rainbow-text {
+  display: inline-block;
+  font-size: 100px;
+  font-family: "Gabarito", sans-serif;
+  font-weight: 800;
+  animation: 
+    2s linear 0s infinite normal backwards running rainbow,
+    1s ease-in-out var(--delay) infinite alternate backwards running pop;
+}
